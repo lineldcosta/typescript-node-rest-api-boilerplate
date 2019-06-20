@@ -1,0 +1,6 @@
+{
+  "exec": "node -r ts-node/register ./src/bootstrap/index",
+  "ext": "ts",
+  "ignore": ["/**/*.spec.ts"],
+  "legacyWatch": true
+}

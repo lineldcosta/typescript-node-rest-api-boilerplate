@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": {
+    "no-var-keyword": false,
+    "prefer-const": false,
+    "member-access": false,
+    "semicolon": [true, "always"],
+    "no-implicit-dependencies": false,
+    "object-literal-sort-keys": false,
+    "no-console": false
+  }
+}
