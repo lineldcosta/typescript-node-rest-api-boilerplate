@@ -1,10 +1,10 @@
 This is a simple boilerplate application, which uses router-services-model architecture to build the api's.
  
-To Run the application in production mode
+<b>To Run the application in production mode </b> <br />
 yarn start:prod
 
-To Run the application in development mode
+<b>To Run the application in development mode </b> <br />
 yarn start:dev
 
-To Run the tests
+<b>To Run the tests </b> <br />
 Yarn test
