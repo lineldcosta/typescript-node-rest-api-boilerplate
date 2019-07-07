@@ -1,10 +1,42 @@
 This is a simple nodejs boilerplate application, which uses router-services-model architecture to build the api's.
  
-<b>To Run the application in production mode </b> <br />
+ 
+## Requirements
+
+[NodeJS](https://nodejs.org/en/)
+
+Install global TypeScript and TypeScript Node
+
+```
+npm install -g typescript ts-node
+```
+
+## Clone this repository
+
+```
+git clone git@github.com:lineldcosta/rest-api-boilerplate.git .
+```
+
+Then install the dependencies
+
+```
+npm install
+```
+
+## To Run the application in production mode
+
+```
 yarn start:prod
+```
 
-<b>To Run the application in development mode </b> <br />
+## To Run the application in development mode
+
+```
 yarn start:dev
+```
 
-<b>To Run the tests </b> <br />
+## To Run the tests
+
+```
 Yarn test
+```
