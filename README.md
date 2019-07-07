@@ -14,7 +14,7 @@ npm install -g typescript ts-node
 ## Clone this repository
 
 ```
-git clone git@github.com:lineldcosta/rest-api-boilerplate.git .
+git@github.com:lineldcosta/typescript-node-rest-api-boilerplate.git
 ```
 
 Then install the dependencies
