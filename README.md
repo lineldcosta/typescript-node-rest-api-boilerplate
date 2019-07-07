@@ -1,4 +1,4 @@
-This is a simple nodejs boilerplate application, which uses router-services-model architecture to build the api's.
+This is a simple nodejs boilerplate application, which uses router-services-model architecture.
  
  
 ## Requirements
