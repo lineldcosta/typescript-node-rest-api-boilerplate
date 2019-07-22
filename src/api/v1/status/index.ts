@@ -43,7 +43,6 @@ export default [
           let apiStatus = await statusServiceInstance.status();
           res.json({ status: apiStatus }).status(200);
         } catch (error) {
-          console.log('error detected', error);
           next(error);
         }
       },

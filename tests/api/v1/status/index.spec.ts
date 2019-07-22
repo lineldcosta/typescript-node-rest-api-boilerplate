@@ -1,5 +1,4 @@
 import * as supertest from 'supertest';
-import { expect } from 'chai';
 import * as qs from 'qs';
 
 let config = require(__dirname + '/../../../../src/cfg/index.ts').default,
@@ -9,26 +8,24 @@ let config = require(__dirname + '/../../../../src/cfg/index.ts').default,
 //  data = require(__dirname + '/../../../../data');
 
 describe('status#index', () => {
-  it('Check server modules are up & running', done => {
+  test('Check server modules are up & running', done => {
     api
       .get('/status')
       .expect(200)
       .end((err, res) => {
-        expect(res.body).to.be.a('object');
-        expect(res.body).to.have.all.keys('status');
-        return;
+        expect(typeof res.body).toBe('object');
+        expect(res.body).toHaveProperty('status');
+        done();
       });
-    done();
   });
 
-  it('Check server modules are up & running without get request', done => {
+  test('Check server modules are up & running without get request', done => {
     api
       .post('/status')
       .expect(404)
       .end((err, res) => {
-        expect(res.body.status).to.equals(404);
-        return;
+        expect(res.body.status).toBe(404);
+        done();
       });
-    done();
   });
 });
