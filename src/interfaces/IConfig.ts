@@ -17,12 +17,13 @@ export interface IApi {
 }
 
 export interface Idb {
-  user: string;
-  database: string;
-  password: string;
-  port: number;
-  max: number;
-  idleTimeoutMillis: number;
+  host?: string;
+  user?: string;
+  database?: string;
+  password?: string;
+  port?: number | string;
+  max?: number | string;
+  idleTimeoutMillis?: number | string;
 }
 export interface IConfig {
   appname?: string;

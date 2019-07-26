@@ -4,6 +4,7 @@ import { Container } from 'typedi';
 import cfg from './../../../cfg';
 
 const config = {
+  host: cfg.db.host,
   user: cfg.db.user, //this is the db user credential
   database: cfg.db.database,
   password: cfg.db.password,

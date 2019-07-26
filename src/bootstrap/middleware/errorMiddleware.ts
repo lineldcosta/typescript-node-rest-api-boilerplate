@@ -40,7 +40,7 @@ const handleServerError = (router: Router) => {
 
     res.api.errors.push({
       field: 'endpoint',
-      message: err.message,
+      message: err.message ? err.message : err,
     });
     res.api.status = 500;
     res.status(res.api.status);

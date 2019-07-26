@@ -3,9 +3,11 @@ import 'reflect-metadata';
 //import 'module-alias/register';
 import * as express from 'express';
 import { createServer } from 'http';
+import * as SetTimeZone from 'set-tz';
 import { middlewareLoader } from './middleware';
 import { handleServerExit, handleExceptions } from './middleware/errorMiddleware';
 import Config from './../cfg';
+SetTimeZone('UTC');
 
 async function startServer() {
   let app = express();

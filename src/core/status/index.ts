@@ -11,6 +11,9 @@ class StatusModel {
           if (error) {
             return reject(error);
           }
+          if (!results.rows.length) {
+            return reject('Database Not Configured Properly');
+          }
           resolve(results.rows[0].status);
         });
       } catch (e) {
