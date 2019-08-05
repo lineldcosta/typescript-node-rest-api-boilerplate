@@ -38,5 +38,5 @@ yarn start:dev
 ## To Run the tests
 
 ```
-Yarn test
+Yarn jest
 ```
