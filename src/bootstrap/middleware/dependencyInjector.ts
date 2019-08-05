@@ -1,13 +1,13 @@
 import { Container } from 'typedi';
 import { Logger } from 'winston';
-import { Pool } from 'pg';
+import { DatabaseConnectionType } from 'slonik';
 
 //set the db connection here
 //set the logger here
 
 type Models = {};
 
-export default ({ models, logger, db }: { models: Models[]; logger: Logger; db: Pool }) => {
+export default ({ models, logger, db }: { models: Models[]; logger: Logger; db: DatabaseConnectionType }) => {
   try {
     models &&
       models.forEach(model => {

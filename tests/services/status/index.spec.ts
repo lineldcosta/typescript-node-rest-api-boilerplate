@@ -14,7 +14,7 @@ describe('Services#status', () => {
     const userServiceInstance = new StatusService(StatusModelMock, LoggerMock);
     const status = await userServiceInstance.status();
     expect(StatusModelMock.getApiStatus).toHaveBeenCalledTimes(1);
-    expect(typeof status.apiStatus).toBe('object');
+    expect(typeof status.status).toBe('object');
     done();
   });
 });

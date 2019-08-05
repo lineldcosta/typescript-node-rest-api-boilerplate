@@ -1,25 +1,19 @@
 import { Service, Inject } from 'typedi';
-import { Pool } from 'pg';
+import { sql, DatabaseConnectionType } from 'slonik';
 
 @Service('statusModel')
 class StatusModel {
-  constructor(@Inject('db') private db: Pool) {}
+  constructor(@Inject('db') private db: DatabaseConnectionType) {}
   public async getApiStatus(): Promise<string> {
-    return new Promise<string>((resolve, reject) => {
-      try {
-        this.db.query('SELECT * FROM status;', (error, results) => {
-          if (error) {
-            return reject(error);
-          }
-          if (!results.rows.length) {
-            return reject('Database Not Configured Properly');
-          }
-          resolve(results.rows[0].status);
-        });
-      } catch (e) {
-        return reject(e);
+    try {
+      let result: any = await this.db.query(sql`SELECT * FROM status`);
+      if (!result.rows.length) {
+        throw new Error('Database Not Configured Properly.');
       }
-    });
+      return result.rows[0].status;
+    } catch (e) {
+      return e;
+    }
   }
 }
 

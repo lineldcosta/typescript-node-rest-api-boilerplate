@@ -22,19 +22,13 @@ const config: IConfig = {
       rounds: 8,
     },
   },
-  db: {
-    user: 'postgres', //this is the db user credential
-    database: 'blueapp',
-    password: 'Impelsys1',
-    port: 5432,
-    max: 10, // max number of clients in the pool
-    idleTimeoutMillis: 3000,
-  },
+  db: {},
   logs: {
     level: process.env.LOG_LEVEL || 'debug',
     logRequestsEnabled: true,
     file: 'debug.log',
   },
+  interceptors: [],
 };
 
 export default {

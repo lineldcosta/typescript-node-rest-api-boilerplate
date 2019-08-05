@@ -32,4 +32,5 @@ export interface IConfig {
   api?: IApi;
   logs?: ILog;
   db?: Idb;
+  interceptors?: any;
 }

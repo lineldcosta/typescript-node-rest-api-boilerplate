@@ -41,7 +41,10 @@ export default [
         try {
           let statusServiceInstance = Container.get(statusService);
           let apiStatus = await statusServiceInstance.status();
-          res.json({ status: apiStatus }).status(200);
+          res.api.status = 200;
+          res.status(res.api.status);
+          res.api.data.push(apiStatus);
+          res.send(res.api);
         } catch (error) {
           next(error);
         }

@@ -7,7 +7,7 @@ export default class StatusService {
     try {
       let apiStatus = await this.statusModel.getApiStatus();
       return {
-        apiStatus: apiStatus,
+        status: apiStatus,
       };
     } catch (e) {
       throw e;

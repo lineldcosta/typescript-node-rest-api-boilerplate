@@ -1,7 +1,5 @@
-import * as pg from 'pg';
-import { Logger } from 'winston';
-import { Container } from 'typedi';
 import cfg from './../../../cfg';
+import { createPool } from 'slonik';
 
 const config = {
   host: cfg.db.host,
@@ -13,8 +11,16 @@ const config = {
   idleTimeoutMillis: cfg.db.idleTimeoutMillis,
 };
 
-const pool = new pg.Pool(config);
+const interceptors = cfg.interceptors;
 
+const pool = createPool(
+  `postgresql://${config.user}:${config.password}@${config.host}:${config.port}/${config.database}`,
+  {
+    interceptors,
+  },
+);
+
+/*
 pool.on('connect', () => {
   console.log('connected to the Database');
 });
@@ -33,5 +39,5 @@ pool.on('error', function(err, client) {
     });
   }
 });
-
+*/
 export default pool;
