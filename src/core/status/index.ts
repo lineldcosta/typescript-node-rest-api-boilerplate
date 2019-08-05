@@ -12,7 +12,7 @@ class StatusModel {
       }
       return result.rows[0].status;
     } catch (e) {
-      return e;
+      throw e;
     }
   }
 }
