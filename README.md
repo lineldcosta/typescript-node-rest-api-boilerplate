@@ -26,13 +26,13 @@ npm install
 ## To Run the application in production mode
 
 ```
-yarn start:prod
+yarn start-prod
 ```
 
 ## To Run the application in development mode
 
 ```
-yarn start:dev
+yarn start-dev
 ```
 
 ## To Run the tests
