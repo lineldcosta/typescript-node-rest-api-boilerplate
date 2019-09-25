@@ -1,4 +1,4 @@
-This is a rest based nodejs boilerplate application, which uses router-services-model architecture.
+This is rest based nodejs boilerplate application, which uses router-services-model architecture.
  
  
 ## Requirements
