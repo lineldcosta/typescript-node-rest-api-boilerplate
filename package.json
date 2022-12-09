@@ -40,7 +40,7 @@
     "nodemon": "^1.19.1",
     "npx": "^10.2.0",
     "prettier": "^1.17.1",
-    "qs": "^6.7.0",
+    "qs": "^6.7.3",
     "sinon": "^7.3.2",
     "sinon-as-promised": "^4.0.3",
     "supertest": "^4.0.2",
